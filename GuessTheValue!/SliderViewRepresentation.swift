@@ -31,20 +31,23 @@ struct SliderViewRepresentation: UIViewRepresentable {
     }
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(value: $value)
+        return Coordinator(value: $value, alpha: $alpha)
     }
 }
 
 extension SliderViewRepresentation {
     final class Coordinator: NSObject {
         @Binding var value: Float
+        @Binding var alpha: Double
         
-        init(value: Binding<Float>) {
+        init(value: Binding<Float>, alpha: Binding<Double>) {
             self._value = value
+            self._alpha = alpha
         }
         
         @objc func sliderValueHasChanged(_ sender: UISlider) {
             value = sender.value
+            sender.thumbTintColor?.withAlphaComponent(alpha)
         }
     }
 }

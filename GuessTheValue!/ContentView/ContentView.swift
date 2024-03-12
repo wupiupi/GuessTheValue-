@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var contentViewVM: ContentViewViewModel
+    
     @State private var showAlert = false
-    @State private var sliderThumbAlpha = 0.0
+    @State private var sliderThumbAlpha = 1.0
     
     var body: some View {
         VStack(spacing: 20) {
@@ -18,7 +19,7 @@ struct ContentView: View {
             
             SliderViewRepresentation(
                 value: $contentViewVM.sliderValue,
-                alpha: .constant(Double(0.5))
+                alpha: $sliderThumbAlpha
             )
 
             ButtonView(text: "Проверь меня!") {
@@ -30,7 +31,7 @@ struct ContentView: View {
             )
         }
         .alert("Результат:", isPresented: $showAlert, actions: {}) {
-            Text("Ты еблан. \(lrintf(contentViewVM.sliderValue))")
+            Text("\(lrintf(contentViewVM.sliderValue))")
         }
         .padding()
     }

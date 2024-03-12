@@ -8,7 +8,7 @@
 import Foundation
 
 final class ContentViewViewModel: ObservableObject {
-    
+
     @Published var randomNumber = Double.random(in: 0...100)
     @Published var sliderValue: Float = 0.0
     
