@@ -21,6 +21,6 @@ final class ContentViewViewModel: ObservableObject {
     
     func computeScore() -> Double {
         let difference = abs(Double(sliderValue) - randomNumber)
-        return (100 - difference) / 100
+        return (100 - difference) / 260
     }
 }
