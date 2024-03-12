@@ -28,6 +28,7 @@ struct SliderViewRepresentation: UIViewRepresentable {
     
     func updateUIView(_ uiView: UISlider, context: Context) {
         uiView.value = value
+        uiView.thumbTintColor = .red.withAlphaComponent(alpha)
     }
     
     func makeCoordinator() -> Coordinator {
@@ -47,7 +48,7 @@ extension SliderViewRepresentation {
         
         @objc func sliderValueHasChanged(_ sender: UISlider) {
             value = sender.value
-            sender.thumbTintColor?.withAlphaComponent(alpha)
+            sender.thumbTintColor = .red.withAlphaComponent(alpha)
         }
     }
 }

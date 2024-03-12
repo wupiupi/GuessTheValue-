@@ -21,6 +21,9 @@ struct ContentView: View {
                 value: $contentViewVM.sliderValue,
                 alpha: $sliderThumbAlpha
             )
+            .onChange(of: contentViewVM.sliderValue) { _, newValue in
+                sliderThumbAlpha = contentViewVM.computeScore()
+            }
 
             ButtonView(text: "Проверь меня!") {
                 showAlert.toggle()
