@@ -37,6 +37,8 @@ struct ContentView: View {
             Alert(
                 title: Text("Результат"),
                 message: Text("""
+                \(contentViewVM.getResult(withScore: contentViewVM.computeScore()))
+                
                 Вы выбрали: \(lrintf(contentViewVM.sliderValue)).
                 Точность попадания: \(contentViewVM.computeScore())%
                 """),
