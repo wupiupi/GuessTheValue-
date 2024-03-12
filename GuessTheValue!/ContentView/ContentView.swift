@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var sliderThumbAlpha = 1.0
     
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 25) {
             CustomText(text: "Подвиньте слайдер как можно ближе к:\n\(lrint(contentViewVM.randomNumber))")
             
             SliderViewRepresentation(
@@ -22,7 +22,7 @@ struct ContentView: View {
                 alpha: $sliderThumbAlpha
             )
             .onChange(of: contentViewVM.sliderValue) { _, newValue in
-                sliderThumbAlpha = contentViewVM.computeScore()
+                sliderThumbAlpha = contentViewVM.computeAlpha()
             }
 
             ButtonView(text: "Проверь меня!") {
@@ -30,13 +30,28 @@ struct ContentView: View {
             }
                         
             ButtonView(text: "Начать заново", 
-                       action: contentViewVM.againButtonDidTapped
+                       action: contentViewVM.buttonDidTapped
             )
         }
-        .alert("Результат:", isPresented: $showAlert, actions: {}) {
-            Text("\(lrintf(contentViewVM.sliderValue))")
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Результат"),
+                message: Text("""
+                Вы выбрали: \(lrintf(contentViewVM.sliderValue)).
+                Точность попадания: \(contentViewVM.computeScore())%
+                """),
+                dismissButton: .default(
+                    Text("OK"),
+                    action: contentViewVM.buttonDidTapped
+                )
+            )
         }
-        .padding()
+            
+            
+            .padding()
+        .onAppear {
+            sliderThumbAlpha = contentViewVM.computeAlpha()
+        }
     }
 }
 
