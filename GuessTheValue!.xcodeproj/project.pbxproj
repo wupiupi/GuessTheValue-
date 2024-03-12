@@ -11,6 +11,7 @@
 		A04C6C732BA0C1A000E8F433 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C6C722BA0C1A000E8F433 /* ContentView.swift */; };
 		A04C6C752BA0C1A100E8F433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04C6C742BA0C1A100E8F433 /* Assets.xcassets */; };
 		A04C6C782BA0C1A100E8F433 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04C6C772BA0C1A100E8F433 /* Preview Assets.xcassets */; };
+		A04C6C812BA0C89A00E8F433 /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C6C802BA0C89A00E8F433 /* ContentViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A04C6C722BA0C1A000E8F433 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A04C6C742BA0C1A100E8F433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A04C6C772BA0C1A100E8F433 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A04C6C802BA0C89A00E8F433 /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				A04C6C702BA0C1A000E8F433 /* GuessTheValue_App.swift */,
-				A04C6C722BA0C1A000E8F433 /* ContentView.swift */,
+				A04C6C7E2BA0C87B00E8F433 /* ContentView */,
 				A04C6C742BA0C1A100E8F433 /* Assets.xcassets */,
 				A04C6C762BA0C1A100E8F433 /* Preview Content */,
 			);
@@ -65,6 +67,15 @@
 				A04C6C772BA0C1A100E8F433 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A04C6C7E2BA0C87B00E8F433 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				A04C6C802BA0C89A00E8F433 /* ContentViewViewModel.swift */,
+				A04C6C722BA0C1A000E8F433 /* ContentView.swift */,
+			);
+			path = ContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				A04C6C732BA0C1A000E8F433 /* ContentView.swift in Sources */,
 				A04C6C712BA0C1A000E8F433 /* GuessTheValue_App.swift in Sources */,
+				A04C6C812BA0C89A00E8F433 /* ContentViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
