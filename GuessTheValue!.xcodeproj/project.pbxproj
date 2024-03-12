@@ -12,6 +12,7 @@
 		A04C6C752BA0C1A100E8F433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04C6C742BA0C1A100E8F433 /* Assets.xcassets */; };
 		A04C6C782BA0C1A100E8F433 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04C6C772BA0C1A100E8F433 /* Preview Assets.xcassets */; };
 		A04C6C812BA0C89A00E8F433 /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C6C802BA0C89A00E8F433 /* ContentViewViewModel.swift */; };
+		A04C6C832BA0D3CC00E8F433 /* SliderViewRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C6C822BA0D3CC00E8F433 /* SliderViewRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		A04C6C742BA0C1A100E8F433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A04C6C772BA0C1A100E8F433 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A04C6C802BA0C89A00E8F433 /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
+		A04C6C822BA0D3CC00E8F433 /* SliderViewRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewRepresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				A04C6C7E2BA0C87B00E8F433 /* ContentView */,
 				A04C6C742BA0C1A100E8F433 /* Assets.xcassets */,
 				A04C6C762BA0C1A100E8F433 /* Preview Content */,
+				A04C6C822BA0D3CC00E8F433 /* SliderViewRepresentation.swift */,
 			);
 			path = "GuessTheValue!";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				A04C6C732BA0C1A000E8F433 /* ContentView.swift in Sources */,
 				A04C6C712BA0C1A000E8F433 /* GuessTheValue_App.swift in Sources */,
+				A04C6C832BA0D3CC00E8F433 /* SliderViewRepresentation.swift in Sources */,
 				A04C6C812BA0C89A00E8F433 /* ContentViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

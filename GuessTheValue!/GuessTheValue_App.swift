@@ -12,6 +12,7 @@ struct GuessTheValue_App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(ContentViewViewModel())
         }
     }
 }
