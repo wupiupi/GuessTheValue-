@@ -34,15 +34,15 @@ final class ContentViewViewModel: ObservableObject {
     func getResult(withScore score: Int) -> String {
         let result: ScoreResults
         
-        switch score {
+        result = switch score {
             case 0...33:
-                result = .bad
+                .bad
             case 34...66:
-                result = .notBad
+                .notBad
             case 66...98:
-                result = .good
+                .good
             default:
-                result = .excellent
+                .excellent
         }
         
         return result.description
